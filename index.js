@@ -46,7 +46,7 @@ async function startDirectBot() {
             console.log(`⛽ वर्तमान गैस: ${gasGwei.toFixed(2)} Gwei`);
 
             // सुरक्षा जांच: जब गैस नॉर्मल हो तभी ट्रेड ट्रिगर हो
-            if (gasGwei < 250) {
+            if (gasGwei < 300) {
                 console.log("⚡ गैस अनुकूल है, मेननेट पर स्वैप आर्डर भेजा जा रहा है...");
                 const deadline = Math.floor(Date.now() / 1000) + 60;
                 
