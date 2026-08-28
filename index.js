@@ -14,8 +14,8 @@ app.listen(PORT, () => {
 async function startBot() {
     console.log("🚀 MEV Bot ब्लॉकचेन से कनेक्ट हो रहा है...");
     
-    // ज़्यादा स्टेबल और तेज़ फ्री RPC लिंक
-    const provider = new ethers.JsonRpcProvider("https://polygon.llamarpc.com");
+    // यहाँ साथ में 137 (Polygon Chain ID) पास कर दिया है ताकि नेटवर्क एरर न आए
+    const provider = new ethers.JsonRpcProvider("https://polygon.llamarpc.com", 137);
     
     try {
         const currentBlock = await provider.getBlockNumber();
