@@ -12,10 +12,10 @@ app.listen(PORT, () => {
 });
 
 async function startBot() {
-    console.log("🚀 MEV Bot नए RPC से कनेक्ट हो रहा है...");
+    console.log("🚀 MEV Bot नए Ankr RPC से कनेक्ट हो रहा है...");
     
-    // 1rpc का स्टेबल और फ्री पॉलीगॉन एंडपॉइंट
-    const provider = new ethers.JsonRpcProvider("https://1rpc.io/matic", 137);
+    // Ankr का स्टेबल और फ्री पॉलीगॉन एंडपॉइंट
+    const provider = new ethers.JsonRpcProvider("https://rpc.ankr.com/polygon", 137);
     
     try {
         const currentBlock = await provider.getBlockNumber();
