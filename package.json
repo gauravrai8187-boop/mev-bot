@@ -1,0 +1,10 @@
+{
+  "name": "mev-bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ethers": "^6.10.0"
+  }
+}
