@@ -12,10 +12,10 @@ app.listen(PORT, () => {
 });
 
 async function startBot() {
-    console.log("🚀 MEV Bot नए Ankr RPC से कनेक्ट हो रहा है...");
+    console.log("🚀 MEV Bot पब्लिक नोड से कनेक्ट हो रहा है...");
     
-    // Ankr का स्टेबल और फ्री पॉलीगॉन एंडपॉइंट
-    const provider = new ethers.JsonRpcProvider("https://rpc.ankr.com/polygon", 137);
+    // यह आरपीसी बिना किसी एपीआई की के फ्री और डायरेक्ट काम करता है
+    const provider = new ethers.JsonRpcProvider("https://polygon-bor-rpc.publicnode.com", 137);
     
     try {
         const currentBlock = await provider.getBlockNumber();
